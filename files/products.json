@@ -1,0 +1,74 @@
+[
+    {
+        "title": "Articulo 1",
+        "descripcion": "Arroz Mocovi x 1 kgs.",
+        "thumbail": "/imagenes.artic1",
+        "code": 2,
+        "stock": "5",
+        "id": "e1hoccncxloysgli9"
+    },
+    {
+        "title": "Articulo 2",
+        "descripcion": "Tomate al natural",
+        "thumbail": "/imagenes.artic2",
+        "code": 1,
+        "stock": "1",
+        "id": "e35wi1a0olp6d28c4"
+    },
+    {
+        "title": "Articulo 3",
+        "descripcion": "Arvejas en lata",
+        "thumbail": "/imagenes.artic3",
+        "code": 2,
+        "stock": "5",
+        "id": "wxvq3zwoalp6d28c7"
+    },
+    {
+        "title": "Articulo 4",
+        "descripcion": "Durazno en almibar",
+        "thumbail": "/imagenes.artic4",
+        "code": 1,
+        "stock": "1",
+        "id": "b1cm9zrlplp6d2hkq"
+    },
+    {
+        "title": "Articulo 5",
+        "descripcion": "Dulce de Higos",
+        "thumbail": "/imagenes.artic5",
+        "code": 2,
+        "stock": "5",
+        "id": "k7aad2tbalp6d2hkr"
+    },
+    {
+        "title": "Articulo 6",
+        "descripcion": "Galletitas Terrabusi Surtidas",
+        "thumbail": "/imagenes.artic6",
+        "code": 1,
+        "stock": "1",
+        "id": "ydpc8i9rglp6d2ist"
+    },
+    {
+        "title": "Articulo 7",
+        "descripcion": "Galletitas dulces ",
+        "thumbail": "/imagenes.artic7",
+        "code": 2,
+        "stock": "5",
+        "id": "xh0u4mardlp6d2isu"
+    },
+    {
+        "title": "Articulo 8",
+        "descripcion": "Galletitas Saladas",
+        "thumbail": "/imagenes.artic8",
+        "code": 1,
+        "stock": "1",
+        "id": "854k6vzpilp6d3kpg"
+    },
+    {
+        "title": "Articulo 9",
+        "descripcion": "Vinagre de alcohol",
+        "thumbail": "/imagenes.artic9",
+        "code": 2,
+        "stock": "5",
+        "id": "abxwi853mlp6d3kph"
+    }
+]
