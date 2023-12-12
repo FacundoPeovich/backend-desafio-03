@@ -14,7 +14,7 @@ class ProductManager {
                 fs.writeFileSync(this.path, '[]');
             }
         } catch (error) {
-            console.error('Error initializing the file:', error);
+            console.error('Error al inicializar el archivo:', error);
         }
     }
 
@@ -23,7 +23,7 @@ class ProductManager {
             const data = fs.readFileSync(this.path, 'utf8');
             this.products = JSON.parse(data);
         } catch (error) {
-            console.error('Error loading products:', error);
+            console.error('Error al cargar los productos:', error);
             this.products = [];
         }
     }
@@ -32,7 +32,7 @@ class ProductManager {
         try {
             fs.writeFileSync(this.path, JSON.stringify(this.products, null, "\t"));
         } catch (error) {
-            console.error("Error saving products:", error.message);
+            console.error("Error al guardar los productos:", error.message);
             throw error;
         }
     }
@@ -45,7 +45,7 @@ class ProductManager {
             typeof code !== 'string' ||
             typeof stock !== 'number' || stock < 0
         ) {
-            console.error("Invalid parameters");
+            console.error("Parámetros inválidos");
             return null;
         }
 
@@ -66,7 +66,7 @@ class ProductManager {
             return this.products;
 
         } catch (error) {
-            console.error("Error adding product:", error.message);
+            console.error("Error al agregar el producto:", error.message);
             return null;
         }
     }
@@ -80,12 +80,12 @@ class ProductManager {
     checkDuplicateCode(code) {
         const existingProduct = this.products.find(product => product.code === code);
         if (existingProduct) {
-            throw new Error("Product code is already in use");
+            throw new Error("El código de producto ya está en uso");
         }
     }
 
     getProducts() {
-        console.log("**** Products ****");
+        console.log("**** Productos ****");
         console.table(this.products);
         return this.products;
     }
@@ -99,10 +99,10 @@ class ProductManager {
                 this.saveProducts();
                 return this.products;
             } else {
-                console.log("Update failed. Product ID not found!");
+                console.log("Actualización fallida. ¡ID de producto no encontrado!");
             }
         } catch (error) {
-            console.error("Error updating product:", error.message);
+            console.error("Error al actualizar el producto:", error.message);
         }
     }
 
@@ -114,11 +114,26 @@ class ProductManager {
                 this.saveProducts();
                 return this.products;
             } else {
-                console.log("Deletion failed. Product ID not found!");
+                console.log("Eliminación fallida. ¡ID de producto no encontrado!");
                 return null;
             }
         } catch (error) {
-            console.error("Error deleting product:", error.message);
+            console.error("Error al eliminar el producto:", error.message);
+        }
+    }
+
+    getProductById(id) {
+        try {
+            const product = this.products.find(product => product.id === id);
+            if (product) {
+                return product;
+            } else {
+                console.log("¡Producto no encontrado!");
+                return null;
+            }
+        } catch (error) {
+            console.error("Error al obtener el producto por ID:", error.message);
+            return null;
         }
     }
 }
